@@ -15,7 +15,7 @@
 
 Gem::Specification.new do |s|
   s.name            = 'logstash-output-bcdb'
-  s.version         = '0.1.0'
+  s.version         = '0.2.0'
   s.licenses        = ['Apache License (2.0)']
   s.summary         = "Sends events to a BCDB Database endpoint"
   s.description     = "This gem is a Logstash plugin required to be installed on top of the Logstash core pipeline using $LS_HOME/bin/logstash-plugin install gemname. This gem is not a stand-alone program"

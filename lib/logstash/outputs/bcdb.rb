@@ -153,13 +153,13 @@ class LogStash::Outputs::Bcdb < LogStash::Outputs::Base
       data.each do |key|
           schema_properties["#{key}"] = {
               :"$id" => "/properties/#{schema_properties["#{key}"]}",
-              :type => "string",
+              :type => ["string", "object", "array"],
               :title => "The #{schema_properties["#{key}"]} Schema"
           }
       end
       schema_data = {
           :type => "object",
-          :"$id" => @bcdb_entity,
+          :"$id" => "http://example.com/"+@bcdb_entity+".json",
           :"$schema" => "http://json-schema.org/draft-07/schema#",
           :title => "The Root Schema",
           :properties => schema_properties,
